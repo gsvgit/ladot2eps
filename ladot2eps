@@ -10,8 +10,9 @@ function call_ladot(){
     cd $1/tmp
     ../ladot/ladot *.ladot
     gen_ps
-    #ps2eps -B dot2dvi.ps
-    cp -u dot2dvi.ps ${2}/${3}.ps
+    ps2pdf dot2dvi.ps
+    pdfcrop dot2dvi.pdf dot2dvi_c.pdf  
+    cp -u dot2dvi_c.pdf ${2}/${3}.pdf
 }
 
 function gen_ps(){
