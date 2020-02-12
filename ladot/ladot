@@ -64,7 +64,7 @@ sub make_stub($$)
     my $length = int($_[1]);
     if ($length == 0) {
         # no sizehint given
-        $length = (length($_[0]) - 1) / 10 ;
+        $length = (length($_[0]) - 1) / 4.5 ;
         }
     # print "LENGTH of $_[0]: $length\n";
     # The first character of an unquoted string in Dot has to be one of these.
